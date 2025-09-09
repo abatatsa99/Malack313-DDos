@@ -5,9 +5,9 @@ import threading
 import random
 import fade
 
-if os.name == "nt":  # Windows
+if os.name == "nt":  
     os.system("cls")
-else:  # Unix/Linux/Mac
+else:  
      os.system("clear")
 
 
