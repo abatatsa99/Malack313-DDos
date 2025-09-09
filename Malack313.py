@@ -77,7 +77,7 @@ class httpth1(threading.Thread):
                 print("[⟨⟩]\033[31m▒\033[31m " +str(u)+ "▒\033[37m Request Sent ▒\033[33m " +url+ "▒=⟩\033[0m" )  
                 print("[⟨⟩]\033[31m▒\033[32m " +str(u)+ "▒\033[4m Request Send \033[1m▒\033[33m " +url+ "▒=⟩\033[0m" )      
             except requests.exceptions.ConnectionError:
-                print("▒ ▒ ▒\033[1mServer \033[4mMaybe\033[97m ▒ ▒ ▒ \033[35mDown ▒ ▒ \033[0m" )
+                print("▒ ▒ ▒ \033[1mServer \033[4mMaybe\033[97m ▒ ▒ ▒ \033[35mDown ▒ ▒ \033[0m" )
                 pass
             except requests.exceptions.InvalidSchema:
                 print ("[Finally attack]")
